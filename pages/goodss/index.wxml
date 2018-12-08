@@ -1,0 +1,192 @@
+<view>
+
+  <swiper class="banner" indicator-dots="true" autoplay="true" interval="5000" duration="1000">
+    <block wx:for="{{banner}}" wx:key="banner-{{index}}">
+      <swiper-item>
+        <image src="{{item}}" class="slide-image" />
+      </swiper-item>
+    </block>
+  </swiper>
+
+  <view class="intro">
+    <view class="title">
+      <text>最腊腊味（黑土猪腊肠400克/袋*3）（须提前一周预定）</text>
+    </view>
+
+    <view class="price">
+      <text>￥</text>
+      <text>135.00</text>
+    </view>
+
+    <view class="prices">
+      <text>135</text>
+    </view>
+
+    <view class="fare">
+      <text>运费：</text>
+      <text>免运费</text>
+    </view>
+  </view>
+
+  <view class="goods-group" bindtap="show">
+    <view class="group">
+      <text>已选：400克/袋*3</text>
+    </view>
+    <view>
+      <icon class="van-icon van-icon-arrow van-cell__right-icon"></icon>
+    </view>
+  </view>
+
+  <view class="name">
+    <image src='../../images/shop/logo.png'></image>
+    <view class="ndesc">
+      <text>益天然之家</text>
+      <icon class="van-icon van-icon-arrow van-cell__right-icon"></icon>
+    </view>
+
+  </view>
+
+  <view class="info">
+    <view class="infotop">
+      <text>线下门店</text>
+      <icon class="van-icon van-icon-arrow van-cell__right-icon"></icon>
+    </view>
+
+    <view class="infobot">
+      <view class="infoitem">
+        <icon class='van-icon van-icon-passed'></icon>
+        <text>企业认证</text>
+      </view>
+
+      <view class="infoitem">
+        <icon class='van-icon van-icon-passed'></icon>
+        <text>担保交易</text>
+      </view>
+
+      <view class="infoitem">
+        <icon class='van-icon van-icon-passed'></icon>
+        <text>线下门店</text>
+      </view>
+
+    </view>
+
+  </view>
+
+  <view class="pic">
+    <block wx:for="{{goods}}" wx:key="banner-{{index}}">
+      <image src="{{item}}" mode='widthFix' />
+    </block>
+
+  </view>
+
+  <view class="lines">
+    <view class="line"></view>
+    <view id='font'>
+      <text>价格说明></text>
+    </view>
+
+  </view>
+
+  <view class="more">
+
+    <view class='moret'>
+      <text>更多精选商品</text>
+    </view>
+
+    <view class='moreinfo'>
+
+      <view>
+        <image src='../../images/shop/info/7.jpg' mode='widthFix'></image>
+      </view>
+
+      <view class='infot'>
+        <text>益天然水牛纯奶</text>
+      </view>
+
+      <view class="price">
+        <text>￥79.00</text>
+      </view>
+
+    </view>
+
+  </view>
+
+  <view class="shop">
+    <view bindtap="shop" class="shopb">
+      <text>进店逛逛</text>
+      <icon class="van-icon van-icon-arrow van-cell__right-icon"></icon>
+    </view>
+
+  </view>
+
+  <view class="footer">
+
+    <view class="left">
+      <view id="like">
+        <icon class='van-icon van-icon-chat van-goods-action-mini-btn__icon'></icon>
+        <text>收藏</text>
+      </view>
+
+      <view id="car">
+        <icon class='van-icon van-icon-cart van-goods-action-mini-btn__icon'></icon>
+        <text>购物车</text>
+      </view>
+    </view>
+
+    <button id="jcar" bindtap="show">加入购物车</button>
+    <button id="buy">立即购买</button>
+
+  </view>
+
+  <view class="mask" wx:if="{{show}}">
+  </view>
+  <view class="showbox {{ show ? 'odd': '' }}">
+
+    <!--图片，标题-->
+    <view class="one">
+
+      <view class="picb">
+        <image src="../../images/shop/banner/1.jpg"></image>
+      </view>
+
+      <view class="cinfo">
+        <text>最腊腊味（黑土猪腊肠400克/袋*3...</text>
+
+        <view class="price">
+          <text>￥</text>
+          <text>135.00</text>
+        </view>
+
+        <icon type="cancel" size="20" bindtap="close" color='#969799' />
+      </view>
+
+    </view>
+    <!--规格-->
+    <view class="two">
+      <view class="type">
+        <view class="typetitle">规格：</view>
+        <view class="typeitem">400克/袋*3</view>
+      </view>
+
+      <view class="much">
+        <view class="muchtitle">购买数量:</view>
+
+        <view class='muchnum'>
+          <button class="minus">-</button>
+          <input type="number" maxlength="4" value="1" class='num'></input>
+          <button class="plus">+</button>
+        </view>
+      </view>
+
+    </view>
+
+
+
+  </view>
+
+
+
+
+
+
+</view>

@@ -1,0 +1,16 @@
+{
+  "pages": [
+    "pages/code/index",
+    "pages/goodss/index"
+    
+  ],
+  "window": {
+    "navigationBarTitleText": "code",
+    "navigationBarTextStyle": "black",
+    "navigationBarBackgroundColor": "#fff",
+    "backgroundTextStyle": "light",
+    "enablePullDownRefresh": false,
+    "backgroundColor": "#F3F3F3"
+  },
+  "debug": true
+}

@@ -1,0 +1,428 @@
+@import "vant-icon.wxss";
+
+page {
+  color: black;
+  background-color: #f8f8f8;
+}
+
+.banner {
+  width: 750rpx;
+  height: 726rpx;
+}
+
+.banner image {
+  width: 750rpx;
+  height: 726rpx;
+}
+
+.intro {
+  padding: 20rpx 20rpx 0;
+  background-color: #fff;
+}
+
+.title {
+  color: black;
+  font-size: 30rpx;
+  text-align: left;
+  line-height: 44rpx;
+}
+
+.price {
+  text-align: left;
+  margin-top: 10rpx;
+}
+
+.price text {
+  font-size: 32rpx;
+  color: #f25742;
+}
+
+.prices text {
+  font-size: 24rpx;
+  color: #999;
+  text-decoration: line-through;
+}
+
+.fare {
+  font-size: 12px;
+  color: #999;
+  padding: 20rpx 0;
+}
+
+.goods-group {
+  margin: 20rpx 0;
+  background-color: #fff;
+  font-size: 30rpx;
+  display: flex;
+  justify-content: space-between;
+  height: 88rpx;
+  padding: 20rpx 30rpx;
+}
+
+.right {
+  text-align: right;
+  font-size: rpx;
+}
+
+.name {
+  padding: 20rpx 30rpx;
+  background-color: #fff;
+  font-size: 30rpx;
+  height: 140rpx;
+  display: flex;
+}
+
+.name image {
+  width: 100rpx;
+  height: 100rpx;
+}
+
+.ndesc {
+  line-height: 100rpx;
+  width: 100%;
+  padding-left: 20rpx;
+}
+
+.ndesc icon {
+  float: right;
+}
+
+.info {
+  margin-top: 6rpx;
+  padding: 20rpx 30rpx;
+  background-color: #fff;
+  font-size: 30rpx;
+}
+
+.infobot {
+  font-size: 24rpx;
+  color: #666;
+  padding-top: 32rpx;
+  display: flex;
+}
+
+.infoitem {
+  padding-right: 32rpx;
+  white-space: nowrap;
+}
+
+.infobot text {
+  padding-right: 32rpx;
+}
+
+.infoitem text {
+  display: inline-block;
+  vertical-align: middle;
+  padding-left: 6rpx;
+}
+
+.pic {
+  padding: 0 20rpx;
+  padding-top: 20rpx;
+  text-align: center;
+}
+
+.pic image {
+  min-width: 100%;
+}
+
+.lines {
+  margin-top: 80rpx;
+}
+
+.line {
+  margin: auto;
+  width: 90%;
+  height: 2rpx;
+  background-color: #d8d8d8;
+  margin-top: 15rpx;
+}
+
+#font {
+  text-align: center;
+  font-size: 24rpx;
+  margin-top: -20rpx;
+}
+
+.more {
+  margin-top: 40rpx;
+  padding: 0 16rpx;
+  padding-bottom: 40rpx;
+}
+
+.moret {
+  font-size: 30rpx;
+  text-align: center;
+}
+
+.infotop {
+  display: flex;
+  justify-content: space-between;
+}
+
+.infot {
+  font-size: 30rpx;
+}
+
+.moreinfo {
+  width: 50%;
+  margin-top: 20rpx;
+  background-color: #fff;
+}
+
+.moreinfo text {
+  padding-left: 10rpx;
+}
+
+.moreinfo image {
+  width: 100%;
+}
+
+.shop {
+  padding-bottom: 140rpx;
+  width: 100%;
+}
+
+.shopb {
+  height: 100rpx;
+  line-height: 100rpx;
+  margin: 10px 15px;
+  border-radius: 0px;
+  border-color: 2rpx solid #f8f8f8;
+  font-size: 30rpx;
+  background-color: #fff;
+  text-align: center;
+}
+
+.footer {
+  height: 100rpx;
+  width: 100%;
+  display: flex;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 99;
+  background-color: #fff;
+}
+
+.left {
+  width: 30%;
+  display: flex;
+  text-align: center;
+}
+
+.left view {
+  width: 50%;
+  background-color: #fff;
+  border-right: 2rpx solid #f8f8f8;
+  color: #7d7e80;
+  font-size: 30rpx;
+}
+
+.left view text {
+  width: 100%;
+  font-size: 24rpx;
+}
+
+.footer button {
+  width: 35%;
+  border-radius: 0px;
+  line-height: 100rpx;
+  color: #fff;
+}
+
+.footer icon {
+  width: 100%;
+}
+
+#jcar {
+  background-color: #f85;
+}
+
+#like icon {
+  color: #f44;
+}
+
+#buy {
+  background-color: #f44;
+}
+
+.van-icon {
+  position: relative;
+  font-family: "vant-icon-1ef3b9";
+}
+
+.van-cell__right-icon {
+  color: #969799;
+  font-size: 32rpx;
+}
+
+.van-icon-arrow:before {
+  content: "\F007";
+}
+
+.van-icon-passed {
+  vertical-align: middle;
+  font-size: 28rpx;
+  line-height: 56rpx;
+}
+
+.van-icon-passed:before {
+  content: "\F038";
+  font-size: 28rpx;
+}
+
+.van-icon-chat:before {
+  content: "\F010";
+  font-size: 40rpx;
+}
+
+.van-icon-cart:before {
+  content: "\F00C";
+  font-size: 40rpx;
+}
+
+.mask {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+}
+
+.showbox {
+  width: 100%;
+  height: 550rpx;
+  position: fixed;
+  left: 0;
+  bottom: -100%;
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  transition: bottom 0.3s ease-out;
+}
+
+.showbox.odd {
+  bottom: 100rpx;
+  transition:  bottom 0.3s ease-out;
+}
+
+.one {
+  margin-left: 20rpx;
+  padding-bottom: 20rpx;
+  border-bottom: 2rpx solid #f8f8f8;
+}
+
+.picb {
+  position: relative;
+  float: left;
+  margin-top: -10px;
+  width: 160rpx;
+  height: 160rpx;
+  background: #f8f8f8;
+  border-radius: 2px;
+}
+
+.picb image {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.cinfo {
+  padding: 10rpx 60rpx 10rpx 10rpx;
+  overflow: hidden;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.cinfo text {
+  font-size: 28rpx;
+}
+
+.cinfo icon {
+  top: 20rpx;
+  right: 30rpx;
+  position: absolute;
+  text-align: center;
+}
+
+.type {
+  margin-left: 30rpx;
+  padding-bottom: 20rpx;
+  border-bottom: 2rpx solid #f8f8f8;
+}
+
+.typetitle {
+  padding-bottom: 20rpx;
+  font-size: 28rpx;
+}
+
+.typeitem {
+  display: inline-block;
+  padding: 10rpx 18rpx;
+  height: 56rpx;
+  min-width: 104rpx;
+  font-size: 24rpx;
+  color: #fff;
+  text-align: center;
+  border-radius: 6rpx;
+  background-color: #f44;
+  border-color: #f44;
+}
+
+.two {
+  padding-bottom: 40rpx;
+  border-bottom: 2rpx solid #f8f8f8;
+}
+
+.much {
+  padding: 24rpx 0;
+  margin-left: 30rpx;
+}
+
+.muchtitle {
+  font-size: 28rpx;
+  float: left;
+}
+
+.muchnum {
+  display: flex;
+  float: right;
+  margin-right: 20px;
+}
+
+.muchnum button {
+  width: 80rpx;
+  height: 66rpx;
+  line-height: 60rpx;
+  font-size: 28rpx;
+}
+
+.minus {
+  background-color: #f8f8f8;
+  vertical-align: middle;
+  border-radius: 0rpx !important;
+}
+
+.num {
+  width: 66rpx;
+  height: 66rpx;
+  border: 1rpx solid #ebedf0 !important;
+  font-size: 28rpx;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.plus {
+  background-color: #fff;
+  vertical-align: middle;
+  border-radius: 0rpx;
+}

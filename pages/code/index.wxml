@@ -1,0 +1,21 @@
+<view>
+
+  <!--图片1-->
+  <view class="top">
+    <image class='codepic' src='../../images/code/code.png'></image>
+  </view>
+
+
+  <!--按钮-->
+  <view class="button">
+    <button bindtap="scode" open-type='redirect'>开始扫码</button>
+  </view>
+
+
+
+  <!--图片2-->
+  <view class="bottom">
+    <image class='example' src='../../images/code/example.png' mode="widthFix"></image>
+  </view>
+
+</view>
