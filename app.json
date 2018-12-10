@@ -1,11 +1,10 @@
 {
   "pages": [
-    "pages/code/index",
-    "pages/goodss/index"
+    "pages/index/index",
+    "pages/content/index"
     
   ],
   "window": {
-    "navigationBarTitleText": "code",
     "navigationBarTextStyle": "black",
     "navigationBarBackgroundColor": "#fff",
     "backgroundTextStyle": "light",
