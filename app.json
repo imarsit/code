@@ -1,15 +1,20 @@
 {
-  "pages": [
-    "pages/index/index",
-    "pages/content/index"
-    
-  ],
-  "window": {
-    "navigationBarTextStyle": "black",
-    "navigationBarBackgroundColor": "#fff",
-    "backgroundTextStyle": "light",
-    "enablePullDownRefresh": false,
-    "backgroundColor": "#F3F3F3"
-  },
-  "debug": true
+	"pages": [
+		"pages/index/index",
+		"pages/content/index"
+	],
+	"window": {
+		"navigationBarTextStyle": "black",
+		"navigationBarBackgroundColor": "#fff",
+		"backgroundTextStyle": "light",
+		"enablePullDownRefresh": false,
+		"backgroundColor": "#F3F3F3"
+	},
+	"plugins": {
+		"wxparserPlugin": {
+			"version": "0.1.0",
+			"provider": "wx9d4d4ffa781ff3ac"
+		}
+	},
+	"debug": true
 }

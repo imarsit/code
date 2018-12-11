@@ -1,3 +1,6 @@
 {
-	"navigationBarTitleText": "商品预览"
+	"navigationBarTitleText": "商品预览",
+	"usingComponents": {
+		"wxparser": "plugin://wxparserPlugin/wxparser"
+	}
 }
