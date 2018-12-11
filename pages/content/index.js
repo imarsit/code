@@ -3,24 +3,20 @@ const ContentStore = require('../../store/content')
 Page({
 	data: {
 		name: '',
+		abstract: '',
+		content: '',
 		nprice: '',
 		price: '',
-		banner: [
-			'../../images/shop/banner/1.jpg',
-			'../../images/shop/banner/2.jpg',
-			'../../images/shop/banner/3.jpg',
-			'../../images/shop/banner/4.jpg'
-		],
-		goods: [
-			'../../images/shop/info/1.jpg',
-			'../../images/shop/info/2.jpg',
-			'../../images/shop/info/3.jpg',
-			'../../images/shop/info/4.jpg',
-			'../../images/shop/info/5.jpg',
-			'../../images/shop/info/6.jpg'
+		shipping: '免邮费',
+		type: '',
+		images: '',
+		show: false,
+		thumbnail: null,
+		spec: [],
+		num: 1,
+		typeStatus: false,
+		id: 0,
 
-		],
-		show: false
 
 	},
 	onLoad(options) {
@@ -31,9 +27,10 @@ Page({
 	load(name, _id) {
 		wx.showLoading({ title: '加载中' })
 		return ContentStore.get(name, _id).then(doc => {
-			let { name } = doc
+			let { name, abstract, content, thumbnail } = doc
+			let { nprice = '', price = '', shipping = '', spec = [], images = [] } = doc.extensions || {}
 
-			this.setData({ name })
+			this.setData({ name, abstract, content, nprice, price, shipping, spec, thumbnail, images })
 		}).catch(err => {
 			let { message } = err
 			wx.showToast({ title: message, icon: 'none' })
@@ -46,6 +43,29 @@ Page({
 	},
 	close() {
 		this.setData({ show: false })
-	}
+	},
+	minus() {
+		let num = this.data.num;
+		if (num > 1) {
+			num--;
+			this.setData({ num: num });
+		}
 
+	},
+	plus() {
+		let num = this.data.num;
+		num++;
+		this.setData({ num: num });
+	},
+	seleted(e) {
+		console.log(e)
+		let id = e.currentTarget.dataset.id;
+		this.setData({
+			id: id
+		});
+
+
+
+
+	}
 })

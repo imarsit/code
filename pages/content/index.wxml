@@ -1,10 +1,13 @@
 <view>
     <swiper class="banner" indicator-dots="true" autoplay="true" interval="5000" duration="1000">
-        <block wx:for="{{ banner }}" wx:key="banner-{{ index }}">
-            <swiper-item>
-                <image src="{{ item }}" class="slide-image" />
+        <block wx:if="{{images.length}}">
+            <swiper-item wx:for="{{ images }}" wx:key="banner-{{ index }}">
+                <image src="{{ item.src }}" class="slide-image" />
             </swiper-item>
         </block>
+        <swiper-item wx:else>
+            <image src="../../images/content/logo.jpg" class="slide-image" />
+        </swiper-item>
     </swiper>
     <view class="intro">
         <view class="title">
@@ -19,21 +22,21 @@
         </view>
         <view class="fare">
             <text>运费：</text>
-            <text>免运费</text>
+            <text>{{shipping}}</text>
         </view>
     </view>
     <view class="goods-group" bindtap="show">
         <view class="group">
-            <text>已选：400克/袋*3</text>
+            <text>已选：{{spec[id][0]}}</text>
         </view>
         <view>
             <icon class="van-icon van-icon-arrow van-cell__right-icon"></icon>
         </view>
     </view>
     <view class="name">
-        <image src='../../images/shop/logo.png'></image>
+        <image src='../../images/content/logo.jpg'></image>
         <view class="ndesc">
-            <text>益天然之家</text>
+            <text>火星之家</text>
             <icon class="van-icon van-icon-arrow van-cell__right-icon"></icon>
         </view>
     </view>
@@ -58,15 +61,11 @@
         </view>
     </view>
     <view class="pic">
-        <block wx:for="{{ goods }}" wx:key="banner-{{ index }}">
-            <image src="{{ item }}" mode='widthFix' />
-        </block>
+        <wxparser rich-text="{{content}}" />
     </view>
     <view class="lines">
         <view class="line"></view>
-        <view id='font'>
-            <text>价格说明></text>
-        </view>
+        
     </view>
     <view class="more">
         <view class='moret'>
@@ -74,13 +73,13 @@
         </view>
         <view class='moreinfo'>
             <view>
-                <image src='../../images/shop/info/7.jpg' mode='widthFix'></image>
+                <image src='../../images/content/demo.jpg' mode='widthFix'></image>
             </view>
             <view class='infot'>
-                <text>益天然水牛纯奶</text>
+                <text>火星人专用纸巾</text>
             </view>
             <view class="price">
-                <text>￥79.00</text>
+                <text>￥39.00</text>
             </view>
         </view>
     </view>
@@ -109,13 +108,14 @@
         <!-- 图片，标题 -->
         <view class="one">
             <view class="picb">
-                <image src="../../images/shop/banner/1.jpg"></image>
+                <image src="{{ thumbnail.src }}" wx:if="{{ thumbnail }}"></image>
+                <image src="../../images/content/logo.jpg" wx:else></image>
             </view>
             <view class="cinfo">
-                <text>最腊腊味（黑土猪腊肠400克/袋*3...</text>
+                <text>{{ name }}</text>
                 <view class="price">
                     <text>￥</text>
-                    <text>135.00</text>
+                    <text>{{spec[id][1]}}</text>
                 </view>
                 <icon type="cancel" size="20" bindtap="close" color='#969799' />
             </view>
@@ -124,14 +124,19 @@
         <view class="two">
             <view class="type">
                 <view class="typetitle">规格：</view>
-                <view class="typeitem">400克/袋*3</view>
+                <view class="{{ index==id ? 'typeitem' : 'seleted'}}" data-id="{{index}}" wx:for="{{ spec }}" wx:key="spec{{ index }}" bindtap="seleted">
+                    {{ item[0] }}
+                </view>
             </view>
             <view class="much">
                 <view class="muchtitle">购买数量:</view>
-                <view class='muchnum'>
-                    <button class="minus">-</button>
-                    <input type="number" maxlength="4" value="1" class='num'></input>
-                    <button class="plus">+</button>
+                <view class="stepper">
+                    <!-- 减号 -->
+                    <text class="{{ minusStatus }}" bindtap="minus">-</text>
+                    <!-- 数值 -->
+                    <input type="number" value="{{ num }}" />
+                    <!-- 加号 -->
+                    <text class="normal" bindtap="plus">+</text>
                 </view>
             </view>
         </view>

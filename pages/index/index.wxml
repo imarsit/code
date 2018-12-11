@@ -2,7 +2,7 @@
 
   <!--图片1-->
   <view class="top">
-    <image class='codepic' src='../../images/code/code.png'></image>
+    <image class='codepic' src='../../images/index/code.png'></image>
   </view>
 
 
@@ -15,7 +15,7 @@
 
   <!--图片2-->
   <view class="bottom">
-    <image class='example' src='../../images/code/example.png' mode="widthFix"></image>
+    <image class='example' src='../../images/index/example.png' mode="widthFix"></image>
   </view>
 
 </view>
