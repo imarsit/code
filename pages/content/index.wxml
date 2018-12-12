@@ -110,11 +110,11 @@
         </view>
 
         <view class="jfooter "   wx:if="{{ jfooter }}">
-            <button class="join">加入购物车</button>
+            <button class="join" bindtap="join">加入购物车</button>
         </view>
 
         <view class="bfooter"   wx:if="{{  bfooter }}">
-            <button class="next">下一步</button>
+            <button class="next" bindtap="next">下一步</button>
         </view>
     </view>
 

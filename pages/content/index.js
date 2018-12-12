@@ -85,6 +85,20 @@ Page({
 			show: true,
 			bfooter: true
 		})
+	},
+	join() {
+		wx.showToast({
+			title: '已成功添加到购物车',
+			icon: 'none',
+			duration: 1500
+		})
+	},
+	next() {
+		wx.showToast({
+			title: '请先完善个人信息噢',
+			icon: 'none',
+			duration: 1500
+		})
 	}
 
 
