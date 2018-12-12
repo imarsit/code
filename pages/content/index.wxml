@@ -101,24 +101,19 @@
                 </view>
             </view>
             <button class="jcar" bindtap="jshow">加入购物车</button>
-            <button class="buy"  bindtap="bshow">立即购买</button>
+            <button class="buy" bindtap="bshow">立即购买</button>
         </view>
-
-        <view class="sfooter"   wx:if="{{ sfooter }}">
+        <view class="sfooter" wx:if="{{ sfooter }}">
             <button class="jcar" bindtap="show">加入购物车</button>
             <button class="buy">立即购买</button>
         </view>
-
-        <view class="jfooter "   wx:if="{{ jfooter }}">
+        <view class="jfooter " wx:if="{{ jfooter }}">
             <button class="join" bindtap="join">加入购物车</button>
         </view>
-
-        <view class="bfooter"   wx:if="{{  bfooter }}">
+        <view class="bfooter" wx:if="{{ bfooter }}">
             <button class="next" bindtap="next">下一步</button>
         </view>
     </view>
-
-
     <view class="mask" wx:if="{{ show }}"></view>
     <view class="showbox {{  show ? 'odd': ''  }}">
         <!-- 图片，标题 -->

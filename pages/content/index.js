@@ -90,14 +90,23 @@ Page({
 		wx.showToast({
 			title: '已成功添加到购物车',
 			icon: 'none',
-			duration: 1500
+			duration: 1500,
 		})
+		this.setData({
+			show: false,
+			jfooter: false
+		})
+		
 	},
 	next() {
 		wx.showToast({
 			title: '请先完善个人信息噢',
 			icon: 'none',
 			duration: 1500
+		})
+		this.setData({
+			show: false,
+			bfooter: false
 		})
 	}
 

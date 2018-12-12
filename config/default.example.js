@@ -1,3 +1,3 @@
 module.exports = {
-	hostname: 'http://www.imarscloud.com/'
+	hostname: 'https://www.imarscloud.com/'
 }
