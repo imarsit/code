@@ -5,17 +5,19 @@ Page({
 		name: '',
 		abstract: '',
 		content: '',
-		nprice: '',
+		nprice: '1',
 		price: '',
 		shipping: '免邮费',
 		type: '',
-		images: '',
+		images: '暂无展示图片',
 		show: false,
 		thumbnail: null,
 		spec: [],
 		num: 1,
-		typeStatus: false,
 		id: 0,
+		sfooter: false,
+		jfooter: false,
+		bfooter: false,
 
 
 	},
@@ -28,7 +30,7 @@ Page({
 		wx.showLoading({ title: '加载中' })
 		return ContentStore.get(name, _id).then(doc => {
 			let { name, abstract, content, thumbnail } = doc
-			let { nprice = '', price = '', shipping = '', spec = [], images = [] } = doc.extensions || {}
+			let { nprice = '暂无价格', price = '', shipping = '', spec = [], images = [] } = doc.extensions || {}
 
 			this.setData({ name, abstract, content, nprice, price, shipping, spec, thumbnail, images })
 		}).catch(err => {
@@ -39,10 +41,18 @@ Page({
 		})
 	},
 	show() {
-		this.setData({ show: true })
+		this.setData({
+			show: true,
+			sfooter: true
+		})
 	},
 	close() {
-		this.setData({ show: false })
+		this.setData({
+			show: false,
+			sfooter: false,
+			jfooter: false,
+			bfooter: false
+		})
 	},
 	minus() {
 		let num = this.data.num;
@@ -63,9 +73,19 @@ Page({
 		this.setData({
 			id: id
 		});
-
-
-
-
+	},
+	jshow() {
+		this.setData({
+			show: true,
+			jfooter: true
+		})
+	},
+	bshow() {
+		this.setData({
+			show: true,
+			bfooter: true
+		})
 	}
+
+
 })

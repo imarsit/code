@@ -65,7 +65,6 @@
     </view>
     <view class="lines">
         <view class="line"></view>
-        
     </view>
     <view class="more">
         <view class='moret'>
@@ -89,20 +88,37 @@
             <icon class="van-icon van-icon-arrow van-cell__right-icon"></icon>
         </view>
     </view>
-    <view class="footer">
-        <view class="left">
-            <view id="like">
-                <icon class='van-icon van-icon-chat van-goods-action-mini-btn__icon'></icon>
-                <text>收藏</text>
+    <view>
+        <view class="footer">
+            <view class="left">
+                <view class="like">
+                    <icon class='van-icon van-icon-chat van-goods-action-mini-btn__icon'></icon>
+                    <text>收藏</text>
+                </view>
+                <view class="car">
+                    <icon class='van-icon van-icon-cart van-goods-action-mini-btn__icon'></icon>
+                    <text>购物车</text>
+                </view>
             </view>
-            <view id="car">
-                <icon class='van-icon van-icon-cart van-goods-action-mini-btn__icon'></icon>
-                <text>购物车</text>
-            </view>
+            <button class="jcar" bindtap="jshow">加入购物车</button>
+            <button class="buy"  bindtap="bshow">立即购买</button>
         </view>
-        <button id="jcar" bindtap="show">加入购物车</button>
-        <button id="buy">立即购买</button>
+
+        <view class="sfooter"   wx:if="{{ sfooter }}">
+            <button class="jcar" bindtap="show">加入购物车</button>
+            <button class="buy">立即购买</button>
+        </view>
+
+        <view class="jfooter "   wx:if="{{ jfooter }}">
+            <button class="join">加入购物车</button>
+        </view>
+
+        <view class="bfooter"   wx:if="{{  bfooter }}">
+            <button class="next">下一步</button>
+        </view>
     </view>
+
+
     <view class="mask" wx:if="{{ show }}"></view>
     <view class="showbox {{  show ? 'odd': ''  }}">
         <!-- 图片，标题 -->
@@ -115,14 +131,15 @@
                 <text>{{ name }}</text>
                 <view class="price">
                     <text>￥</text>
-                    <text>{{spec[id][1]}}</text>
+                    <text wx:if="{{ spec.length }}">{{spec[id][1]}}</text>
+                    <text wx:else>1</text>
                 </view>
                 <icon type="cancel" size="20" bindtap="close" color='#969799' />
             </view>
         </view>
         <!-- 规格 -->
         <view class="two">
-            <view class="type">
+            <view class="type" wx:if="{{ spec.length }}">
                 <view class="typetitle">规格：</view>
                 <view class="{{ index==id ? 'typeitem' : 'seleted'}}" data-id="{{index}}" wx:for="{{ spec }}" wx:key="spec{{ index }}" bindtap="seleted">
                     {{ item[0] }}
