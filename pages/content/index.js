@@ -108,6 +108,28 @@ Page({
 			show: false,
 			bfooter: false
 		})
+	},
+	tjoin() {
+		wx.showToast({
+			title: '已成功添加到购物车',
+			icon: 'none',
+			duration: 1500,
+		})
+		this.setData({
+			show: false,
+			sfooter: false
+		})
+	},
+	tnext() {
+		wx.showToast({
+			title: '请先完善个人信息噢',
+			icon: 'none',
+			duration: 1500
+		})
+		this.setData({
+			show: false,
+			sfooter: false
+		})
 	}
 
 
