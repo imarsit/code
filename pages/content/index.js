@@ -5,7 +5,7 @@ Page({
 		name: '',
 		abstract: '',
 		content: '',
-		nprice: '1',
+		nprice: '',
 		price: '',
 		shipping: '免邮费',
 		type: '',
@@ -30,7 +30,11 @@ Page({
 		wx.showLoading({ title: '加载中' })
 		return ContentStore.get(name, _id).then(doc => {
 			let { name, abstract, content, thumbnail } = doc
-			let { nprice = '暂无价格', price = '', shipping = '', spec = [], images = [] } = doc.extensions || {}
+			let { nprice = '暂无价格', price, shipping = '', spec = [], images = [] } = doc.extensions || {}
+
+			price = (parseFloat(price) || 0).toFixed(2)
+			nprice = (parseFloat(nprice) || 0).toFixed(2)
+
 
 			this.setData({ name, abstract, content, nprice, price, shipping, spec, thumbnail, images })
 		}).catch(err => {

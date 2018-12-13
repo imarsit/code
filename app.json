@@ -1,7 +1,8 @@
 {
 	"pages": [
 		"pages/index/index",
-		"pages/content/index"
+		"pages/content/index",
+		"pages/redpacket/index"
 	],
 	"window": {
 		"navigationBarTextStyle": "black",

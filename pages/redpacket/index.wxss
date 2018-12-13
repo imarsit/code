@@ -1,0 +1,95 @@
+page {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.part {
+    position: relative;
+}
+
+.part image {
+    width: 90%;
+}
+
+.bg {
+    width: 100% !important;
+}
+
+.before {
+    text-align: center;
+    width: 100%;
+    position: absolute;
+    top: 280rpx;
+}
+
+.open {
+    text-align: center;
+    width: 100%;
+    position: absolute;
+    top: 410rpx;
+    animation: open 0.2s linear 0.5s infinite alternate;
+    animation-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+@keyframes open {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(0.9);
+    }
+}
+
+.open image {
+    width: 30%;
+}
+
+.top {
+    position: absolute;
+    z-index: 1;
+    top: 380rpx;
+    text-align: center;
+    width: 100%;
+}
+
+.tops {
+    position: absolute;
+    z-index: 4;
+    top: 115rpx;
+    text-align: center;
+    width: 100%;
+}
+
+.buttom {
+    position: absolute;
+    z-index: 2;
+    top: 380rpx;
+    text-align: center;
+    width: 100%;
+}
+
+.tips {
+    position: absolute;
+    z-index: 3;
+    padding-top: 60rpx;
+    top: 380rpx;
+    text-align: center;
+    width: 100%;
+}
+
+.txt {
+    font-size: 44rpx;
+    color: #333333;
+}
+
+.price {
+    font-size: 71rpx;
+    color: #f8382b;
+}
+
+.yuan {
+    color: #f8382b;
+    font-size: 36rpx;
+    padding-right: 20rpx;
+}
