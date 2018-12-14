@@ -11,7 +11,7 @@
     </view>
 </view>
 <!-- 打开后的状态 -->
-<view class="after" wx:if="{{after}}">
+<view class="after" wx:else>
     <view class="aposition">
         <view class="tops">
             <image src="../../images/redpacket/tops.png" mode="widthFix" />
