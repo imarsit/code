@@ -1,31 +1,38 @@
-<view class="part">
-    <image src="../../images/redpacket/bg.jpg" mode="widthFix" class="bg" />
-    <!-- 原始状态 -->
-    <view class="block" wx:if="{{open}}">
+<image src="../../images/redpacket/bg.jpg" mode="widthFix" class="bg" />
+<!-- 原始状态 -->
+<view class="block" wx:if="{{open}}">
+    <view class="bposition">
         <view class="before">
-            <image src="../../images/redpacket/no.png" mode="widthFix"  />
+            <image src="../../images/redpacket/no.png" mode="widthFix" />
         </view>
         <view class="open">
-            <image src="../../images/redpacket/open.png" mode="widthFix" bindtap="open"/>
+            <image src="../../images/redpacket/open.png" mode="widthFix" bindtap="open" />
         </view>
     </view>
-    <!-- 打开后的状态 -->
-    <view class="after" wx:if="{{after}}">
+</view>
+<!-- 打开后的状态 -->
+<view class="after" wx:if="{{after}}">
+    <view class="aposition">
         <view class="tops">
             <image src="../../images/redpacket/tops.png" mode="widthFix" />
         </view>
         <view class="top">
             <image src="../../images/redpacket/top.png" mode="widthFix" />
         </view>
+        <view class="tips">
+            <view class='text' wx:if="{{price.length}}">
+                <text class="txt">恭喜您获得红包</text>
+                <view>
+                    <text class="price">{{price}}</text>
+                    <text class="yuan">元</text>
+                </view>
+            </view>
+            <view class='text' wx:else>
+                <text class="txt">很遗憾,您本次未抽到红包</text>
+            </view>
+        </view>
         <view class="buttom">
             <image src="../../images/redpacket/after.png" mode="widthFix" />
-        </view>
-        <view class="tips">
-            <text class="txt">恭喜您获得红包</text>
-            <view>
-                <text class="price">{{price}}</text>
-                <text class="yuan">元</text>
-            </view>
         </view>
     </view>
 </view>

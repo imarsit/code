@@ -2,7 +2,7 @@ Page({
 	data: {
 		open: true,
 		after: false,
-		price:'8.88'
+		price:'88'
 	},
 	open() {
 		this.setData({
