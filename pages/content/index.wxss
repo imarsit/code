@@ -19,6 +19,12 @@ page {
     background-color: #fff;
 }
 
+.share {
+    font-size: 12px;
+	color: #999;
+	float: right;
+}
+
 .title {
     color: black;
     font-size: 30rpx;
@@ -45,7 +51,8 @@ page {
 .fare {
     font-size: 12px;
     color: #999;
-    padding: 20rpx 0;
+	padding: 20rpx 0;
+	
 }
 
 .goods-group {

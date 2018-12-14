@@ -35,4 +35,40 @@
             <image src="../../images/redpacket/after.png" mode="widthFix" />
         </view>
     </view>
+    <view class="btn">
+        <button class="back" bindtap="index">返回首页</button>
+        <button class="share" bindtap="share">分享</button>
+    </view>
+</view>
+<!-- 点击分享后 -->
+<view class="mask" wx:if="{{show}}"></view>
+<view class="show" wx:if="{{show}}">
+    <view class="stop">
+        <view class="one">
+            <button open-type="share" class="sharef">
+                <image src="../../images/redpacket/share.png" mode="widthFix" class="icon" bindtap="sharef" />
+            </button>
+            <view>分享给朋友</view>
+        </view>
+        <view class="two">
+            <button  class="sharef"  bindtap="build">
+                <image src="../../images/redpacket/poster.png" mode="widthFix" class="icon"  />
+            </button>
+            <view class="poster">生成红包海报</view>
+        </view>
+    </view>
+    <view class="close" bindtap="close">关闭</view>
+</view>
+<!-- 弹出图层 -->
+<view id="poster" wx:if="{{poster}}">
+    <view class="showp">
+        <icon type="clear" size="20" bindtap="closep" />
+        <view class="ppic">
+            <image src="../../images/redpacket/demo.png" mode="widthFix" />
+        </view>
+        <view class="save">
+            <button class="savepic" bindtap="savepic">保存图片</button>
+            <text>保存至相册</text>
+        </view>
+    </view>
 </view>

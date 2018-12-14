@@ -3,8 +3,9 @@ page {
     width: 100%;
     overflow: hidden;
 }
-image{
-	width: 90%;
+
+image {
+    width: 80%;
 }
 
 .bg {
@@ -15,7 +16,7 @@ image{
 
 .block {
     position: absolute;
-    top: 380rpx;
+    top: 30%;
     width: 100%;
     height: 100%;
     text-align: center;
@@ -29,7 +30,7 @@ image{
 
 .open {
     position: absolute;
-    top: 136rpx;
+    top: 20%;
     width: 100%;
     animation: open 0.2s linear 0.5s infinite alternate;
     animation-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
@@ -45,12 +46,12 @@ image{
 }
 
 .open image {
-    width: 30%;
+    width: 30% !important;
 }
 
 .after {
     position: absolute;
-    top: 380rpx;
+    top: 30%;
     width: 100%;
     height: 100%;
     text-align: center;
@@ -59,11 +60,12 @@ image{
 .aposition {
     position: relative;
     text-align: center;
+    height: 100%;
 }
 
 .tops {
     position: absolute;
-    top: -252rpx;
+    top: -235rpx;
     width: 100%;
     text-align: center;
     z-index: 1;
@@ -75,7 +77,7 @@ image{
         top: 0rpx;
     }
     100% {
-        top: -252rpx;
+        top: -235rpx;
     }
 }
 
@@ -114,6 +116,7 @@ image{
     position: absolute;
     width: 100%;
     z-index: 4;
+    top: -2rpx;
 }
 
 .text {
@@ -140,4 +143,152 @@ image{
     color: #f8382b;
     font-size: 36rpx;
     padding-right: 20rpx;
+}
+
+.btn {
+    position: absolute;
+    top: 60%;
+    width: 100%;
+    display: flex;
+    z-index: 6;
+}
+
+.btn button {
+    width: 300rpx;
+    border-radius: 46rpx;
+}
+
+.back {
+    background-color: #ffbe22;
+    font-weight: bold;
+}
+
+.share {
+    background-color: #d33e34;
+    color: #fff;
+    font-weight: bold;
+}
+
+.mask {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    z-index: 6;
+}
+
+.show {
+    position: fixed;
+    z-index: 7;
+    bottom: 0rpx;
+    height: 350rpx;
+    width: 100%;
+    background: #f2f2f2;
+    text-align: center;
+    color: #555555;
+    animation: show 0.3s;
+}
+
+@keyframes show {
+    0% {
+        bottom: -300rpx;
+    }
+    100% {
+        bottom: 0rpx;
+    }
+}
+
+.stop {
+    display: flex;
+    justify-content: space-around;
+    height: 200rpx;
+    text-align: center;
+    padding-top: 30rpx;
+    padding-bottom: 20rpx;
+    font-size: 34rpx;
+}
+
+.stop view {
+    width: 100%;
+    text-align: center;
+    white-space: nowrap;
+    padding-top: 10rpx;
+}
+
+.sharef image {
+    width: 36%;
+}
+
+.sharef {
+    border: none !important;
+    background: #f2f2f2;
+    height: 70%;
+}
+
+.sharef::after {
+    border: none !important;
+}
+
+.close {
+    background-color: #fff;
+    height: 100%;
+    line-height: 110rpx;
+    font-size: 34rpx;
+}
+
+#poster {
+    position: absolute;
+    top: 65rpx;
+    z-index: 8;
+    height: 90%;
+    width: 100%;
+    text-align: center;
+}
+
+.showp {
+    position: relative;
+    width: 80%;
+    height: 100%;
+    margin: auto;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 20rpx;
+}
+
+.showp icon {
+    position: absolute;
+    top: 20rpx;
+    right: 20rpx;
+}
+
+.showp .ppic {
+    position: absolute;
+    width: 100%;
+    top: 7%;
+}
+
+.showp .ppic image {
+	box-shadow: #ececec 1px 1px 10px;
+}
+
+.showp .save {
+    position: absolute;
+    bottom: 35rpx;
+    width: 100%;
+}
+
+.showp .save .savepic {
+    width: 70%;
+    height: 70rpx;
+    background-color: #eb554d;
+    color: #fff;
+    line-height: 70rpx;
+    font-size: 30rpx;
+}
+
+.showp .save text {
+    color: #888888;
+    font-size: 26rpx;
 }
