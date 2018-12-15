@@ -15,9 +15,13 @@ Page({
 		spec: [],
 		num: 1,
 		id: 0,
+		footer: true,
 		sfooter: false,
 		jfooter: false,
 		bfooter: false,
+		mask: false,
+		sharebox: false,
+		poster: false
 
 
 	},
@@ -25,6 +29,11 @@ Page({
 		let { name, _id } = options
 
 		this.load(name, _id)
+
+		wx.showShareMenu({
+			// 要求小程序返回分享目标信息
+			withShareTicket: true
+		});
 	},
 	load(name, _id) {
 		wx.showLoading({ title: '加载中' })
@@ -100,7 +109,7 @@ Page({
 			show: false,
 			jfooter: false
 		})
-		
+
 	},
 	next() {
 		wx.showToast({
@@ -133,6 +142,77 @@ Page({
 		this.setData({
 			show: false,
 			sfooter: false
+		})
+	},
+	share() {
+		this.setData({
+			mask: true,
+			sharebox: true
+		})
+	},
+	closebox() {
+		this.setData({
+			sharebox: false,
+			poster: false,
+			mask: false,
+			footer: true
+		})
+	},
+	build() {
+		this.setData({
+			mask: true,
+			sharebox: false,
+			footer: false,
+			poster: true
+		})
+	},
+	//分享
+	onShareAppMessage(ops) {
+		if (ops.from === 'button') {
+			// 来自页面内转发按钮
+			console.log(ops.target)
+		}
+		return {
+			title: '给您推荐好物~',
+			path: `pages/content/index`,
+			success(res) {
+				// 转发成功
+				console.log("转发成功:" + JSON.stringify(res));
+				let shareTickets = res.shareTickets;
+			},
+			fail(res) {
+				// 转发失败
+				console.log("转发失败:" + JSON.stringify(res));
+			}
+		}
+	},
+	// 保存
+	savepic() {
+		wx.downloadFile({
+			url: 'http://pic1.win4000.com/wallpaper/2018-11-10/5be64dce9952e.jpg',
+			success: function (res) {
+				// 只要服务器有响应数据，就会把响应内容写入文件并进入 success 回调，业务需要自行判断是否下载到了想要的内容
+				if (res.statusCode === 200) {
+					wx.saveImageToPhotosAlbum({
+						filePath: res.tempFilePath,
+						success(res) {
+							wx.showToast({
+								title: '保存图片成功！',
+								icon: 'none',
+								duration: 1500
+
+							})
+						},
+						fail(res) {
+							wx.showToast({
+								title: '保存图片失败！',
+								icon: 'none',
+								duration: 1500
+							})
+						}
+					})
+				}
+			}
 		})
 	}
 

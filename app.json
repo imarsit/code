@@ -2,14 +2,15 @@
 	"pages": [
 		"pages/index/index",
 		"pages/content/index",
-		"pages/redpacket/index"
+		"pages/redpacket/index",
+		"pages/coupon/index"
 	],
 	"window": {
 		"navigationBarTextStyle": "black",
 		"navigationBarBackgroundColor": "#fff",
 		"backgroundTextStyle": "light",
 		"enablePullDownRefresh": false,
-		"backgroundColor": "#F3F3F3"
+		"backgroundColor": "#f7f7f7"
 	},
 	"plugins": {
 		"wxparserPlugin": {

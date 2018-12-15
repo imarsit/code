@@ -1,0 +1,21 @@
+<view class="ctit">
+    <view>今日福利</view>
+    <text>/专享福利　天天优惠/</text>
+</view>
+<view class="ccont" wx:for="{{items}}" wx:for-item="item">
+    <view class="contpic">
+        <image src="{{item.img}}" mode="widthFix" />
+    </view>
+    <view class="continfo">
+        <view class="top">{{item.title}}</view>
+        <view class="bottom">
+            <text class="type">￥</text>
+            <text class="price">{{item.price}}</text>
+            <text class="condition">{{item.condition}}</text>
+        </view>
+    </view>
+    <view class="split-line"></view>
+    <button class="contdraw">
+        <view class="get">立即领取</view>
+    </button>
+</view>

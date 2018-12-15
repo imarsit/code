@@ -19,11 +19,12 @@
         </view>
         <view class="prices">
             <text>{{ price }}</text>
+            <image src="../../images/content/share.png" mode="widthFix" class="shareicon"  bindtap="share" />
         </view>
         <view class="fare">
             <text>运费：</text>
             <text>{{shipping}}</text>
-            <view class="share">分享</view>
+            <view class="share" >分享</view>
         </view>
     </view>
     <view class="goods-group" bindtap="show">
@@ -90,7 +91,7 @@
         </view>
     </view>
     <view>
-        <view class="footer">
+        <view class="footer" wx:if="{{footer}}">
             <view class="left">
                 <view class="like">
                     <icon class='van-icon van-icon-chat van-goods-action-mini-btn__icon'></icon>
@@ -115,7 +116,7 @@
             <button class="next" bindtap="next">下一步</button>
         </view>
     </view>
-    <view class="mask" wx:if="{{ show }}"></view>
+    <view class="mask" wx:if="{{ mask }}"></view>
     <view class="showbox {{  show ? 'odd': ''  }}">
         <!-- 图片，标题 -->
         <view class="one">
@@ -151,6 +152,37 @@
                     <!-- 加号 -->
                     <text class="normal" bindtap="plus">+</text>
                 </view>
+            </view>
+        </view>
+    </view>
+    <!-- 点击分享后 -->
+    <view class="sharebox" wx:if="{{sharebox}}">
+        <view class="stop">
+            <view class="shareone">
+                <button open-type="share" class="sharef">
+                    <image src="../../images/redpacket/share.png" mode="widthFix" class="icon" bindtap="sharef" />
+                </button>
+                <view>分享给朋友</view>
+            </view>
+            <view class="sharetwo">
+                <button class="sharef" bindtap="build">
+                    <image src="../../images/redpacket/poster.png" mode="widthFix" class="icon" />
+                </button>
+                <view class="poster">生成商品海报</view>
+            </view>
+        </view>
+        <view class="close" bindtap="closebox">关闭</view>
+    </view>
+    <!-- 弹出图层 -->
+    <view id="poster" wx:if="{{poster}}">
+        <view class="showp">
+            <icon type="clear" size="20" bindtap="closebox" />
+            <view class="ppic">
+                <image src="../../images/redpacket/demo.png" mode="widthFix" />
+            </view>
+            <view class="save">
+                <button class="savepic" bindtap="savepic">保存图片</button>
+                <text>保存至相册</text>
             </view>
         </view>
     </view>

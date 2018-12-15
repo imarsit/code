@@ -17,9 +17,6 @@ Page({
 	close() {
 		this.setData({ show: false })
 	},
-	sharef() {
-
-	},
 	build() {
 		this.setData({
 			show: false,
@@ -86,12 +83,16 @@ Page({
 						success(res) {
 							wx.showToast({
 								title: '保存图片成功！',
+								icon: 'none',
+								duration: 1500
 							
 							})
 						},
 						fail(res) {
 							wx.showToast({
 								title: '保存图片失败！',
+								icon: 'none',
+								duration: 1500
 							})
 						}
 					})
