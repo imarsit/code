@@ -4,6 +4,12 @@ page {
     background-color: #f7f7f7;
 }
 
+.coupon {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
 .ctit {
     margin-top: 10rpx;
     text-align: center;
@@ -24,14 +30,14 @@ page {
 }
 
 .ccont {
-    height: 200rpx;
+    height: 170rpx;
     /* background-color: #fff; */
     margin: auto;
     margin-top: 10rpx;
     display: flex;
     justify-content: space-between;
-    padding: 16rpx;
-
+    width: 96%;
+    overflow: hidden;
 }
 
 .ccont .contpic {
@@ -90,11 +96,23 @@ page {
     font-size: 28rpx;
 }
 
+.ccont .continfo .geted {
+    position: absolute;
+    width: 30%;
+    height: 48rpx;
+    top: -20rpx;
+    right: -25rpx;
+    z-index: 99;
+}
+
+.ccont .continfo .geted image {
+    width: 100%;
+}
+
 .ccont .contdraw {
     width: 30%;
     height: 100%;
-    line-height: 200rpx;
-    background-color: #fff;
+    line-height: 170rpx;
     background-color: #74d1d6;
     color: #fff;
     border-bottom-right-radius: 20rpx;
