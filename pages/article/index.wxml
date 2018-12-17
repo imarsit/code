@@ -1,0 +1,49 @@
+<view class="atop">
+    <view class="tit">
+        <text class="title">{{title}}</text>
+        <view class="form">
+            <text class="name">{{name}}</text>
+            <text class="company">{{company}}</text>
+            <text class="date">{{date}}</text>
+        </view>
+        <view class="banner" wx:for="{{banner}}" wx:for-item="banner">
+            <image src="{{banner.img}}" mode="widthFix" />
+        </view>
+        <view class="tinfo" wx:for="{{tinfo}}" wx:for-item="tinfo">
+            <text>{{tinfo.text}}</text>
+        </view>
+    </view>
+    <view class="info" wx:for="{{info}}" wx:for-item="info">
+        <view class="itit">{{info.itit}}</view>
+        <view class="itext">{{info.itext}}</view>
+        <view class="ipic">
+            <image src="{{info.ipic}}" mode="widthFix" />
+        </view>
+    </view>
+    <view class="textus">
+        <view class="utit">联系我们</view>
+        <view class="uinfo"  wx:for="{{uinfo}}" wx:for-item="uinfo">
+            <view>
+                <!-- <image /> -->
+                <text>{{uinfo.title}}</text>
+                <text>{{uinfo.info}}</text>
+            </view>
+        </view>
+    </view>
+    <view class="upic">
+        <image src="{{upic}}" mode="widthFix" />
+    </view>
+    <view class="monitor">
+        <view class="read">
+            <text>阅读</text>
+            <text>7444</text>
+        </view>
+        <view class="like">
+            <text>赞</text>
+            <text>1000</text>
+        </view>
+    </view>
+</view>
+<view class="abottom">
+    <text class="msg">写留言</text>
+</view>

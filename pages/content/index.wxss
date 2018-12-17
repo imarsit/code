@@ -138,6 +138,7 @@ page {
     padding: 0 20rpx;
     padding-top: 20rpx;
     text-align: center;
+    font-size: 30rpx;
 }
 
 .pic image {
@@ -410,6 +411,7 @@ page {
     font-size: 24rpx;
     line-height: 56rpx;
     border-radius: 6rpx;
+    margin-top:20rpx;
 }
 
 .typeitem {
@@ -422,7 +424,7 @@ page {
     text-align: center;
     border-radius: 6rpx;
     background-color: #f44;
-    border-color: #f44;
+    border: 2rpx solid #f44;
     line-height: 56rpx;
     margin-right: 20rpx;
 }

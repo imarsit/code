@@ -10,30 +10,11 @@ page {
     text-align: center;
 }
 
-.ctit {
-    margin-top: 10rpx;
-    text-align: center;
-    height: 100rpx;
-    width: 100%;
-    background-color: #fff;
-    padding-top: 10rpx;
-}
-
-.ctit view {
-    color: #3a3a3a;
-    font-size: 28rpx;
-}
-
-.ctit text {
-    color: #818181;
-    font-size: 24rpx;
-}
-
 .ccont {
     height: 170rpx;
     /* background-color: #fff; */
     margin: auto;
-    margin-top: 10rpx;
+    margin-top: 30rpx;
     display: flex;
     justify-content: space-between;
     width: 96%;
@@ -71,50 +52,53 @@ page {
 .ccont .continfo .top {
     position: absolute;
     top: 20rpx;
-    font-size: 36rpx;
-    color: #373737;
+    font-size: 32rpx;
+    color: #333333;
+    font-weight: bold;
 }
 
 .ccont .continfo .bottom {
     position: absolute;
     bottom: 20rpx;
-    color: #ec494c;
-}
-
-.ccont .continfo .bottom .type {
-    font-size: 28rpx;
-    position: absolute;
-    top: -8rpx;
-}
-
-.ccont .continfo .bottom .price {
-    padding-left: 26rpx;
+    color: #f88335;
+    font-size: 26rpx;
 }
 
 .ccont .continfo .bottom .condition {
     padding-left: 16rpx;
-    font-size: 28rpx;
 }
 
 .ccont .continfo .geted {
     position: absolute;
     width: 30%;
     height: 48rpx;
-    top: -20rpx;
-    right: -25rpx;
+    top: 0rpx;
+    right: 9rpx;
     z-index: 99;
 }
 
 .ccont .continfo .geted image {
-    width: 100%;
+    width: 150%;
 }
 
 .ccont .contdraw {
     width: 30%;
     height: 100%;
     line-height: 170rpx;
-    background-color: #74d1d6;
+    background-color: #f16731;
     color: #fff;
     border-bottom-right-radius: 20rpx;
     border-top-right-radius: 20rpx;
+    font-size: 32rpx;
+}
+
+.ccont .after {
+    width: 30%;
+    height: 100%;
+    line-height: 170rpx;
+    color: #fff;
+    border-bottom-right-radius: 20rpx;
+    border-top-right-radius: 20rpx;
+    background-color: #d3d0cf;
+    font-size: 32rpx;
 }

@@ -1,0 +1,123 @@
+.atop {
+    margin-top: 30rpx;
+    padding: 20rpx;
+    background-color: #fff;
+}
+
+.title {
+    font-size: 38rpx;
+    color: #333333;
+    font-weight: bold;
+}
+
+.atop .tit .form text {
+    font-size: 30rpx;
+    padding-top: 20rpx;
+    padding-right: 20rpx;
+    color: #b3b3b3;
+}
+
+.company {
+    color: #5b6a91 !important;
+}
+
+.banner {
+    margin-top: 20rpx;
+}
+
+.banner image {
+    width: 100%;
+}
+
+.tinfo text {
+    padding-top: 28rpx;
+    width: 100%;
+    font-size: 30rpx;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.info {
+    margin-top: 40rpx;
+}
+
+.info view {
+    padding-top: 30rpx;
+}
+
+.info .itit {
+    font-size: 34rpx;
+    font-weight: bold;
+}
+
+.info .itext {
+    font-size: 30rpx;
+    letter-spacing: 4rpx;
+    line-height: 1.5rem;
+}
+
+.info image {
+    width: 100%;
+    margin: auto;
+}
+
+.textus {
+    margin-top: 30rpx;
+    padding: 20rpx;
+    background-color: #fbfbfb;
+}
+
+.uinfo {
+    padding-top: 40rpx;
+}
+
+.uinfo view {
+    padding-top: 16rpx;
+    border-bottom: 2rpx solid #b3b3b3;
+}
+
+.uinfo text {
+    font-size: 30rpx;
+    padding-right: 20rpx;
+}
+
+.upic {
+    margin-top: 30rpx;
+}
+
+.upic image {
+    margin: auto;
+    width: 100%;
+}
+
+.monitor {
+    margin-top: 60rpx;
+    padding-left: 20rpx;
+    padding-right: 20rpx;
+    padding-bottom: 30rpx;
+    display: flex;
+    justify-content: space-between;
+    font-size: 30rpx;
+}
+
+.monitor text {
+    padding-right: 20rpx;
+}
+
+.read {
+    color: #b3b3b3;
+}
+
+.like {
+    color: #5b6a91
+}
+
+.abottom {
+    background-color: #f2f2f2;
+    height: 130rpx;
+    width: 100%;
+    text-align: center;
+	line-height: 100rpx;
+	color: #5b6a91;
+	font-size: 30rpx;
+}
