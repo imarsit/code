@@ -10,12 +10,14 @@
                 <text class="price">{{item.price}}</text>
                 <text class="condition">{{item.condition}}</text>
             </view>
-            <view class="geted" data-id="{{index}}" wx:if="{{gtype}}">
-                <image src="{{item.gettype}}" mode="widthFix" />
+            <view class="geted" data-index="{{index}}">
+                <image src="../../images/coupon/geted.png" mode="widthFix" wx:if="{{item.type}}" />
+                <image src="" mode="widthFix" wx:else />
             </view>
         </view>
-        <view class="{{item.bg}}" data-id="{{index}}" bindtap="get"  wx:key="item{{ index }}">
-            <view>{{item.ctype}}</view>
+        <view class="{{item.type ? 'after' : 'contdraw'}}" data-index="{{index}}" bindtap="get">
+            <view  wx:if="{{!item.type}}"> 立即领取</view>
+            <view wx:else>已领取</view>
         </view>
     </view>
 </view>
