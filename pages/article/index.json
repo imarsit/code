@@ -1,3 +1,6 @@
 {
-	"navigationBarTitleText": "文章页预览"
+	"navigationBarTitleText": "文章预览",
+	"usingComponents": {
+		"wxparser": "plugin://wxparserPlugin/wxparser"
+	}
 }

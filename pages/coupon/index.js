@@ -1,7 +1,6 @@
 Page({
 	data: {
 		gtype: false,
-		
 		items: [
 			{
 				img: '../../images/coupon/demo.png',
@@ -9,13 +8,12 @@ Page({
 				price: '5',
 				condition: '满120可用',
 				ctype: '立即领取',
-				gettype: '',
 				bg: 'contdraw'
 			},
 			{
 				img: '../../images/coupon/demo.png',
-				title: '5元全品类券',
-				price: '5',
+				title: '15元全品类券',
+				price: '15',
 				condition: '满120可用',
 				ctype: '立即领取',
 				bg: 'contdraw'
@@ -23,9 +21,9 @@ Page({
 			},
 			{
 				img: '../../images/coupon/demo.png',
-				title: '5元全品类券',
-				price: '5',
-				condition: '满120可用',
+				title: '50元全品类券',
+				price: '50',
+				condition: '满100可用',
 				ctype: '立即领取',
 				bg: 'contdraw'
 			}
@@ -35,12 +33,16 @@ Page({
 	get(e) {
 		let id = e.currentTarget.dataset.id;
 		console.log(id)
+
 		let showtype = "items[" + id + "].ctype";
+		console.log(showtype)
+
 		let gettype = "items[" + id + "].gettype";
-		let bg = "items[" + id + "].bg";
-
-
 		console.log(gettype)
+
+		let bg = "items[" + id + "].bg";
+		console.log(bg)
+
 		this.setData({
 			id: id,
 			gtype: true,
