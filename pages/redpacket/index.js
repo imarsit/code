@@ -4,7 +4,6 @@ Page({
 		price: '88.88',
 		show: false,
 		poster: false,
-
 	},
 	open() {
 		this.setData({ open: false })
@@ -54,27 +53,25 @@ Page({
 	//分享
 	onShareAppMessage(ops) {
 		if (ops.from === 'button') {
-			// 来自页面内转发按钮
-			console.log(ops.target)
 		}
 		return {
 			title: '发红包啦',
 			path: `pages/redpacket/index`,
 			success(res) {
 				// 转发成功
-				console.log("转发成功:" + JSON.stringify(res));
-				let shareTickets = res.shareTickets;
+				console.log("转发成功:" + JSON.stringify(res))
+				let shareTickets = res.shareTickets
 			},
 			fail(res) {
 				// 转发失败
-				console.log("转发失败:" + JSON.stringify(res));
+				console.log("转发失败:" + JSON.stringify(res))
 			}
 		}
 	},
 	// 保存
 	savepic() {
 		wx.downloadFile({
-			url: 'http://pic1.win4000.com/wallpaper/2018-11-10/5be64dce9952e.jpg',
+			url: '',
 			success: function (res) {
 				// 只要服务器有响应数据，就会把响应内容写入文件并进入 success 回调，业务需要自行判断是否下载到了想要的内容
 				if (res.statusCode === 200) {
@@ -85,7 +82,7 @@ Page({
 								title: '保存图片成功！',
 								icon: 'none',
 								duration: 1500
-							
+
 							})
 						},
 						fail(res) {

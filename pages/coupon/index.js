@@ -1,42 +1,17 @@
 Page({
 	data: {
 		// 所有优惠券列表
-		items: [
-			{
-				id: '1',
-				img: '../../images/coupon/demo.png',
-				title: '5元全品类券',
-				price: '5',
-				condition: '满120可用',
-			},
-			{
-				id: '2',
-				img: '../../images/coupon/demo.png',
-				title: '15元全品类券',
-				price: '15',
-				condition: '满120可用',
-			},
-			{
-				id: '3',
-				img: '../../images/coupon/demo.png',
-				title: '50元全品类券',
-				price: '50',
-				condition: '满100可用',
-			}
-
-		],
+		items: [],
 		// 已领优惠券列表
 		coupon: []
 	},
 
 	onLoad() {
-
 		this.load()
 	},
 	// 获取数据
 	load() {
 		let { coupon } = this.data
-
 		// 接口请求返回优惠券列表
 		let items = this.data.items
 

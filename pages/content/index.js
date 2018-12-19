@@ -70,19 +70,18 @@ Page({
 	minus() {
 		let num = this.data.num;
 		if (num > 1) {
-			num--;
-			this.setData({ num: num });
+			num--
+			this.setData({ num: num })
 		}
 
 	},
 	plus() {
 		let num = this.data.num;
-		num++;
-		this.setData({ num: num });
+		num++
+		this.setData({ num: num })
 	},
 	seleted(e) {
-		console.log(e)
-		let id = e.currentTarget.dataset.id;
+		let id = e.currentTarget.dataset.id
 		this.setData({
 			id: id
 		});
@@ -169,8 +168,6 @@ Page({
 	//分享
 	onShareAppMessage(ops) {
 		if (ops.from === 'button') {
-			// 来自页面内转发按钮
-			console.log(ops.target)
 		}
 		return {
 			title: '给您推荐好物~',
@@ -189,7 +186,7 @@ Page({
 	// 保存
 	savepic() {
 		wx.downloadFile({
-			url: 'http://pic1.win4000.com/wallpaper/2018-11-10/5be64dce9952e.jpg',
+			url: '',
 			success: function (res) {
 				// 只要服务器有响应数据，就会把响应内容写入文件并进入 success 回调，业务需要自行判断是否下载到了想要的内容
 				if (res.statusCode === 200) {
