@@ -137,7 +137,7 @@ page {
 .pic {
     padding: 0 20rpx;
     padding-top: 20rpx;
-    text-align: center;
+    text-align: left;
     font-size: 30rpx;
 }
 
@@ -411,7 +411,7 @@ page {
     font-size: 24rpx;
     line-height: 56rpx;
     border-radius: 6rpx;
-    margin-top:20rpx;
+    margin-top: 20rpx;
 }
 
 .typeitem {
