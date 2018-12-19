@@ -3,7 +3,7 @@ Page({
 		open: true,
 		price: '88.88',
 		show: false,
-		poster: false,
+		poster: false
 	},
 	open() {
 		this.setData({ open: false })
