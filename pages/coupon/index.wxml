@@ -1,5 +1,5 @@
 <view class="coupon">
-    <view class="ccont" wx:for="{{items}}" wx:for-item="item">
+    <view class="ccont" wx:for="{{items}}" wx:for-item="item" wx:key="item-{{index}}">
         <view class="contpic">
             <image src="{{item.img}}" mode="widthFix" />
         </view>

@@ -1,6 +1,6 @@
 Page({
 	data: {
-
+		// 所有优惠券列表
 		items: [
 			{
 				id: '1',
@@ -8,7 +8,6 @@ Page({
 				title: '5元全品类券',
 				price: '5',
 				condition: '满120可用',
-				type: false
 			},
 			{
 				id: '2',
@@ -16,8 +15,6 @@ Page({
 				title: '15元全品类券',
 				price: '15',
 				condition: '满120可用',
-				type: false
-
 			},
 			{
 				id: '3',
@@ -25,40 +22,48 @@ Page({
 				title: '50元全品类券',
 				price: '50',
 				condition: '满100可用',
-				type: false
 			}
 
 		],
+		// 已领优惠券列表
 		coupon: []
-
-
 	},
-	get(e) {
-		// 1.获取唯一标记
-		// 2.找到要循环的变量
-		// 3.循环变量
-		// 4.比较唯一标记，查找指定项
-		// 5.指定项赋值
-		// 6.判断是否找到指定项
-		// 7.如果有
-		// 7.1 赋值
-		// 7.2 反向赋值
-		// 8.如果没有
 
-		let index = e.currentTarget.dataset.index
+	onLoad() {
+
+		this.load()
+	},
+	// 获取数据
+	load() {
+		let { coupon } = this.data
+
+		// 接口请求返回优惠券列表
 		let items = this.data.items
+
+		items = items.map(v => {
+			// 查询是否已领
+			v.type = coupon.indexOf(v.id) >= 0
+
+			return v
+		})
+
+		// 设置视图响应数据
+		this.setData({ items })
+	},
+	// 领取优惠券
+	get(e) {
+		let { items, coupon } = this.data
+
+		// 获取需要领取的优惠券的唯一id
+		let { index } = e.currentTarget.dataset
+
+		// 获取所对应的优惠券
 		let results = items[index]
 
-		if (results) {
+		// 领取操作
+		coupon.push(results.id)
 
-			results.type = !results.type ? true : results.type
-
-			items[index] = results
-
-			this.setData({items})
-		}
-
-
-
+		// 刷新页面
+		this.load()
 	}
 })
