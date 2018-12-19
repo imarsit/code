@@ -1,9 +1,9 @@
 {
 	"pages": [
+		"pages/coupon/index",
 		"pages/index/index",
 		"pages/content/index",
 		"pages/redpacket/index",
-		"pages/coupon/index",
 		"pages/article/index"
 	],
 	"window": {
