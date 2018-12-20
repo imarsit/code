@@ -24,6 +24,6 @@
 <view class="coupon" wx:else>
     <view class="none">
         <image src="/images/hall/none.png" mode="widthFix" />
-        <view>暂无红包可以领取</view>
+        <view>暂无红包可领取</view>
     </view>
 </view>
