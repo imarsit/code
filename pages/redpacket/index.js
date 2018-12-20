@@ -9,7 +9,11 @@ Page({
 		this.setData({ open: false })
 
 	},
-
+	back() { 
+		wx.reLaunch({
+			url: '/pages/hall/index'
+		})
+	},
 	share() {
 		this.setData({ show: true })
 	},

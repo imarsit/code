@@ -1,0 +1,23 @@
+<view class="coupon">
+    <view class="ccont" wx:for="{{items}}" wx:for-item="item" wx:key="item-{{id}}">
+        <view class="contpic">
+            <image src="{{item.thumbnail}}" mode="widthFix" />
+        </view>
+        <view class="continfo">
+            <view class="top">{{item.title}}</view>
+            <view class="bottom">
+                <text class="type">￥</text>
+                <text class="price">{{item.price}}</text>
+                <text class="condition">{{item.condition}}</text>
+            </view>
+            <view class="geted">
+                <image src="../../images/hall/geted.png" mode="widthFix" wx:if="{{item.type}}" />
+                <image src="" mode="widthFix" />
+            </view>
+        </view>
+        <view class="getbox">
+            <view class="after" wx:if="{{item.type}}">已领取</view>
+            <view class="contdraw" bindtap="gettype" data-id="{{item.id}}" wx:else>立即领取</view>
+        </view>
+    </view>
+</view>
