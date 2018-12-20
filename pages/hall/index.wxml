@@ -1,5 +1,5 @@
-<view class="coupon">
-    <view class="ccont" wx:for="{{redpackets}}" wx:for-item="item" wx:key="{{item._id}}" wx:if="{{redpackets.length}}">
+<view class="coupon" wx:if="{{redpackets.length}}">
+    <view class="ccont" wx:for="{{redpackets}}" wx:for-item="item" wx:key="{{item._id}}">
         <view class="contpic">
             <image src="{{item.thumbnail.src}}" mode="widthFix" wx:if="{{item.thumbnail}}" />
         </view>
