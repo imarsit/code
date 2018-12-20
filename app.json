@@ -5,7 +5,8 @@
 		"pages/redpacket/index",
 		"pages/coupon/index",
 		"pages/article/index",
-		"pages/hall/index"
+		"pages/hall/index",
+		"pages/loading/index"
 
 	],
 	"window": {
