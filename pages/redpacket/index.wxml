@@ -1,6 +1,6 @@
 <image src="/images/redpacket/bg.jpg" mode="widthFix" class="bg" />
 <!-- 原始状态 -->
-<view class="block" wx:if="{{open}}">
+<view class="block" wx:if="{{uncollected}}">
     <view class="bposition">
         <view class="before">
             <image src="/images/redpacket/no.png" mode="widthFix" />
@@ -20,10 +20,10 @@
             <image src="/images/redpacket/top.png" mode="widthFix" />
         </view>
         <view class="tips">
-            <view class='text' wx:if="{{price.length}}">
+            <view class='text' wx:if="{{ price > 0 }}">
                 <text class="txt">恭喜您获得红包</text>
                 <view>
-                    <text class="price">{{price}}</text>
+                    <text class="price">{{ price }}</text>
                     <text class="yuan">元</text>
                 </view>
             </view>
@@ -51,8 +51,8 @@
             <view>分享给朋友</view>
         </view>
         <view class="two">
-            <button  class="sharef"  bindtap="build">
-                <image src="/images/redpacket/poster.png" mode="widthFix" class="icon"  />
+            <button class="sharef" bindtap="build">
+                <image src="/images/redpacket/poster.png" mode="widthFix" class="icon" />
             </button>
             <view class="poster">生成红包海报</view>
         </view>

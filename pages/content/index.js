@@ -22,8 +22,6 @@ Page({
 		mask: false,
 		sharebox: false,
 		poster: false
-
-
 	},
 	onLoad(options) {
 		let { name, _id } = options
@@ -43,7 +41,6 @@ Page({
 
 			price = (parseFloat(price) || 0).toFixed(2)
 			nprice = (parseFloat(nprice) || 0).toFixed(2)
-
 
 			this.setData({ name, abstract, content, nprice, price, shipping, spec, thumbnail, images })
 		}).catch(err => {
