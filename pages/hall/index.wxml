@@ -2,13 +2,14 @@
     <view class="ccont" wx:for="{{redpackets}}" wx:for-item="item" wx:key="{{item._id}}">
         <view class="contpic">
             <image src="{{item.thumbnail.src}}" mode="widthFix" wx:if="{{item.thumbnail}}" />
+            <image src="/images/hall/thumbnail.png" mode="widthFix" wx:else />
         </view>
         <view class="continfo">
-            <view class="top">{{item.title}}</view>
+            <view class="top">{{item.name}}</view>
             <view class="bottom">
                 <text class="type">￥</text>
-                <text class="price">{{item.price}}</text>
-                <text class="condition">{{item.condition}}</text>
+                <text class="price">{{item.amount}}</text>
+                <text class="condition">{{item.type}}</text>
             </view>
             <view class="geted">
                 <image src="/images/hall/geted.png" mode="widthFix" wx:if="{{item.uncollected}}" />
