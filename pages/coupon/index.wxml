@@ -23,7 +23,7 @@
 </view>
 <view class="coupon" wx:else>
     <view class="none">
-        <image src="../../images/hall/none.png" mode="widthFix" />
+        <image src="/images/hall/none.png" mode="widthFix" />
         <view>暂无优惠券可以领取</view>
     </view>
 </view>
