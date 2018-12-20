@@ -1,7 +1,7 @@
 <view class="coupon">
-    <view class="ccont" wx:for="{{redpackets}}" wx:for-item="item" wx:key="{{item._id}}">
+    <view class="ccont" wx:for="{{redpackets}}" wx:for-item="item" wx:key="{{item._id}}" wx:if="{{redpackets.length}}">
         <view class="contpic">
-            <image  src="{{item.thumbnail.src}}" mode="widthFix" wx:if="{{item.thumbnail}}" />
+            <image src="{{item.thumbnail.src}}" mode="widthFix" wx:if="{{item.thumbnail}}" />
         </view>
         <view class="continfo">
             <view class="top">{{item.title}}</view>
@@ -18,5 +18,11 @@
             <view class="after" wx:if="{{item.uncollected}}">已领取</view>
             <view class="contdraw" bindtap="go" data-id="{{item._id}}" wx:else>立即领取</view>
         </view>
+    </view>
+</view>
+<view class="coupon" wx:else>
+    <view class="none">
+        <image src="../../images/hall/none.png" mode="widthFix" />
+        <view>暂无红包可以领取</view>
     </view>
 </view>

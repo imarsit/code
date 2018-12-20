@@ -102,3 +102,17 @@ page {
     font-size: 34rpx;
     border-radius: 10rpx;
 }
+
+.none {
+    margin-top: 70rpx;
+}
+
+.none image {
+    width: 50%;
+}
+
+.none view {
+    font-size: 34rpx;
+	color: #b1b1b1;
+	margin-top: 40rpx;
+}
