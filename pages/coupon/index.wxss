@@ -12,7 +12,6 @@ page {
 
 .ccont {
     height: 170rpx;
-    /* background-color: #fff; */
     margin: auto;
     margin-top: 30rpx;
     display: flex;
@@ -42,11 +41,6 @@ page {
     background-color: #fff;
     position: relative;
     padding-left: 10rpx;
-    /* border-right-style: dashed;
-    border-width: 2rpx;
-    border-right-color: #818181; */
-    /* border-bottom-right-radius: 20rpx;
-    border-top-right-radius: 20rpx; */
 }
 
 .ccont .continfo .top {
@@ -101,4 +95,18 @@ page {
     border-top-right-radius: 20rpx;
     background-color: #d3d0cf;
     font-size: 32rpx;
+}
+
+.none {
+    margin-top: 70rpx;
+}
+
+.none image {
+    width: 50%;
+}
+
+.none view {
+    font-size: 34rpx;
+    color: #b1b1b1;
+    margin-top: 40rpx;
 }

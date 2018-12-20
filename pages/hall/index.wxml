@@ -1,4 +1,4 @@
-<view class="coupon">
+<view class="coupon" wx:if="{{items.length}}">
     <view class="ccont" wx:for="{{items}}" wx:for-item="item" wx:key="item-{{id}}">
         <view class="contpic">
             <image src="{{item.thumbnail}}" mode="widthFix" />
@@ -19,5 +19,11 @@
             <view class="after" wx:if="{{item.type}}">已领取</view>
             <view class="contdraw" bindtap="gettype" data-id="{{item.id}}" wx:else>立即领取</view>
         </view>
+    </view>
+</view>
+<view class="coupon" wx:else>
+    <view class="none">
+        <image src="../../images/hall/none.png" mode="widthFix" />
+        <view>暂无红包可以领取</view>
     </view>
 </view>
