@@ -1,12 +1,12 @@
-<image src="../../images/redpacket/bg.jpg" mode="widthFix" class="bg" />
+<image src="/images/redpacket/bg.jpg" mode="widthFix" class="bg" />
 <!-- 原始状态 -->
 <view class="block" wx:if="{{open}}">
     <view class="bposition">
         <view class="before">
-            <image src="../../images/redpacket/no.png" mode="widthFix" />
+            <image src="/images/redpacket/no.png" mode="widthFix" />
         </view>
         <view class="open">
-            <image src="../../images/redpacket/open.png" mode="widthFix" bindtap="open" />
+            <image src="/images/redpacket/open.png" mode="widthFix" bindtap="open" />
         </view>
     </view>
 </view>
@@ -14,10 +14,10 @@
 <view class="after" wx:else>
     <view class="aposition">
         <view class="tops">
-            <image src="../../images/redpacket/tops.png" mode="widthFix" />
+            <image src="/images/redpacket/tops.png" mode="widthFix" />
         </view>
         <view class="top">
-            <image src="../../images/redpacket/top.png" mode="widthFix" />
+            <image src="/images/redpacket/top.png" mode="widthFix" />
         </view>
         <view class="tips">
             <view class='text' wx:if="{{price.length}}">
@@ -32,7 +32,7 @@
             </view>
         </view>
         <view class="buttom">
-            <image src="../../images/redpacket/after.png" mode="widthFix" />
+            <image src="/images/redpacket/after.png" mode="widthFix" />
         </view>
     </view>
     <view class="btn">
@@ -46,13 +46,13 @@
     <view class="stop">
         <view class="one">
             <button open-type="share" class="sharef">
-                <image src="../../images/redpacket/share.png" mode="widthFix" class="icon" bindtap="sharef" />
+                <image src="/images/redpacket/share.png" mode="widthFix" class="icon" bindtap="sharef" />
             </button>
             <view>分享给朋友</view>
         </view>
         <view class="two">
             <button  class="sharef"  bindtap="build">
-                <image src="../../images/redpacket/poster.png" mode="widthFix" class="icon"  />
+                <image src="/images/redpacket/poster.png" mode="widthFix" class="icon"  />
             </button>
             <view class="poster">生成红包海报</view>
         </view>
@@ -64,7 +64,7 @@
     <view class="showp">
         <icon type="clear" size="20" bindtap="closep" />
         <view class="ppic">
-            <image src="../../images/redpacket/demo.png" mode="widthFix" />
+            <image src="/images/redpacket/demo.png" mode="widthFix" />
         </view>
         <view class="save">
             <button class="savepic" bindtap="savepic">保存图片</button>

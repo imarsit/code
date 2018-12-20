@@ -11,7 +11,7 @@
                 <text class="condition">{{item.condition}}</text>
             </view>
             <view class="geted" data-index="{{index}}">
-                <image src="../../images/coupon/geted.png" mode="widthFix" wx:if="{{item.type}}" />
+                <image src="/images/coupon/geted.png" mode="widthFix" wx:if="{{item.type}}" />
                 <image src="" mode="widthFix" wx:else />
             </view>
         </view>

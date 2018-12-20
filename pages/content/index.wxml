@@ -6,7 +6,7 @@
             </swiper-item>
         </block>
         <swiper-item wx:else>
-            <image src="../../images/content/show.png" class="slide-image" />
+            <image src="/images/content/show.png" class="slide-image" />
         </swiper-item>
     </swiper>
     <view class="intro">
@@ -19,7 +19,7 @@
         </view>
         <view class="prices">
             <text>{{ price }}</text>
-            <image src="../../images/content/share.png" mode="widthFix" class="shareicon"  bindtap="share" />
+            <image src="/images/content/share.png" mode="widthFix" class="shareicon"  bindtap="share" />
         </view>
         <view class="fare">
             <text>运费：</text>
@@ -36,7 +36,7 @@
         </view>
     </view>
     <view class="name">
-        <image src='../../images/content/logo.jpg'></image>
+        <image src='/images/content/logo.jpg'></image>
         <view class="ndesc">
             <text>火星之家</text>
             <icon class="van-icon van-icon-arrow van-cell__right-icon"></icon>
@@ -74,7 +74,7 @@
         </view>
         <view class='moreinfo'>
             <view>
-                <image src='../../images/content/show.png' mode='widthFix'></image>
+                <image src='/images/content/show.png' mode='widthFix'></image>
             </view>
             <view class='infot'>
                 <text>火星人专用纸巾</text>
@@ -122,7 +122,7 @@
         <view class="one">
             <view class="picb">
                 <image src="{{ thumbnail.src }}" wx:if="{{ thumbnail }}"></image>
-                <image src="../../images/content/thumbnail.png" wx:else></image>
+                <image src="/images/content/thumbnail.png" wx:else></image>
             </view>
             <view class="cinfo">
                 <text>{{ name }}</text>
@@ -160,13 +160,13 @@
         <view class="stop">
             <view class="shareone">
                 <button open-type="share" class="sharef">
-                    <image src="../../images/redpacket/share.png" mode="widthFix" class="icon" bindtap="sharef" />
+                    <image src="/images/redpacket/share.png" mode="widthFix" class="icon" bindtap="sharef" />
                 </button>
                 <view>分享给朋友</view>
             </view>
             <view class="sharetwo">
                 <button class="sharef" bindtap="build">
-                    <image src="../../images/redpacket/poster.png" mode="widthFix" class="icon" />
+                    <image src="/images/redpacket/poster.png" mode="widthFix" class="icon" />
                 </button>
                 <view class="poster">生成商品海报</view>
             </view>
@@ -178,7 +178,7 @@
         <view class="showp">
             <icon type="clear" size="20" bindtap="closebox" />
             <view class="ppic">
-                <image src="../../images/redpacket/demo.png" mode="widthFix" />
+                <image src="/images/redpacket/demo.png" mode="widthFix" />
             </view>
             <view class="save">
                 <button class="savepic" bindtap="savepic">保存图片</button>

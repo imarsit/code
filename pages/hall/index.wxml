@@ -11,7 +11,7 @@
                 <text class="condition">{{item.condition}}</text>
             </view>
             <view class="geted">
-                <image src="../../images/hall/geted.png" mode="widthFix" wx:if="{{item.type}}" />
+                <image src="/images/hall/geted.png" mode="widthFix" wx:if="{{item.type}}" />
                 <image src="" mode="widthFix" />
             </view>
         </view>
