@@ -1,7 +1,8 @@
 <view class="coupon" wx:if="{{items.length}}">
     <view class="ccont" wx:for="{{items}}" wx:for-item="item" wx:key="item-{{index}}">
         <view class="contpic">
-            <image src="{{item.img}}" mode="widthFix" />
+            <image src="{{item.thumbnail.src}}" mode="widthFix" wx:if="{{item.thumbnail}}" />
+            <image src="/images/coupon/demo.png" mode="widthFix" wx:else />
         </view>
         <view class="continfo">
             <view class="top">{{item.title}}</view>
@@ -23,7 +24,7 @@
 </view>
 <view class="coupon" wx:else>
     <view class="none">
-        <image src="/images/hall/none.png" mode="widthFix" />
+        <image src="/images/coupon/none.png" mode="widthFix" />
         <view>暂无优惠券可领取</view>
     </view>
 </view>

@@ -32,7 +32,7 @@ page {
 }
 
 .ccont .contpic image {
-    width: 90%;
+    width: 60%;
 }
 
 .ccont .continfo {
