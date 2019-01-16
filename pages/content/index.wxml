@@ -35,13 +35,13 @@
             <icon class="van-icon van-icon-arrow van-cell__right-icon"></icon>
         </view>
     </view>
-    <view class="name">
+    <!-- <view class="name">
         <image src='/images/content/logo.jpg'></image>
         <view class="ndesc">
             <text>火星之家</text>
             <icon class="van-icon van-icon-arrow van-cell__right-icon"></icon>
         </view>
-    </view>
+    </view> -->
     <view class="info">
         <view class="infotop">
             <text>线下门店</text>
@@ -68,7 +68,7 @@
     <view class="lines">
         <view class="line"></view>
     </view>
-    <view class="more">
+    <!-- <view class="more">
         <view class='moret'>
             <text>更多精选商品</text>
         </view>
@@ -83,7 +83,7 @@
                 <text>￥39.00</text>
             </view>
         </view>
-    </view>
+    </view> -->
     <view class="shop">
         <view bindtap="shop" class="shopb">
             <text>进店逛逛</text>
